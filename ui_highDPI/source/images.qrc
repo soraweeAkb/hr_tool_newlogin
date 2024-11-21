@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="login">
+    <file>OwAWN3cQ.png</file>
+    <file>AKT_logo.png</file>
+    <file>user_psw_1.png</file>
+    <file>button_1.png</file>
+    <file>button_0.png</file>
+  </qresource>
+</RCC>

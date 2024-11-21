@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1070</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1070</width>
+    <height>726</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1070</width>
+    <height>726</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>AKT HR Information System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+
+    background-color:rgb(255, 255, 253);
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>90</y>
+      <width>400</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:18pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>TIME CARD</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>210</y>
+      <width>400</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:18pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>ASK FOR LEAVE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>330</y>
+      <width>400</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:18pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>OT APPLICATION</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>450</y>
+      <width>400</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:18pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>BOOK MEETING ROOM</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>1070</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:18pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:12px;
+}</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>10</y>
+       <width>120</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/
+	font-weight:bold;    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Log out</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>10</y>
+       <width>90</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/
+	font-weight:bold;    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Quit</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>13</y>
+       <width>401</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/
+	font-weight:bold;    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+
+}
+
+QLabel:hover
+{
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QLabel:pressed
+{
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Hi, An Lu, welcome!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>10</y>
+       <width>260</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/
+	font-weight:bold;    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Password Changing</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>620</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:15pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>HR ADMINISTRATION</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>130</y>
+      <width>350</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/source/1.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>620</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:15pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>LEADER/MD/DM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>580</y>
+      <width>270</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(111, 111, 111);
+   font-size:10pt;
+ 	
+}</string>
+    </property>
+    <property name="text">
+     <string>(Group leader/MD/DM only)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>580</y>
+      <width>211</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(111, 111, 111);
+   font-size:10pt;
+ 	
+}</string>
+    </property>
+    <property name="text">
+     <string>(HR administrator only)</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image1.qrc"/>
+ </resources>
+ <connections/>
+</ui>

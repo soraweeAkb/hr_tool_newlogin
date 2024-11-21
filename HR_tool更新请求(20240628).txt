@@ -1,0 +1,5 @@
+HR TOOL更新请求（2024/6/28）
+
+1.Hometown删除
+2.Forget Record Time, 增加work time, over time栏目（自动计算工作时间和OT时间）
+3.Aoi, Ozawa san在点击Accept All按钮的时候，系统崩溃（一键接受所有请假申请）

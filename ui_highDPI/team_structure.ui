@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TeamStructure</class>
+ <widget class="QMainWindow" name="TeamStructure">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1272</width>
+    <height>724</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Steam Structure</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+	background-color: rgb(255, 251, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NAME</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>POSITION</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DIVISION</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LEADER ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LEADER NAME</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DM ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DM NAME</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MD ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MD NAME</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+
+{
+    font-family:Microsoft Yahei;
+
+    font-size:13pt;
+ 
+    color:white;
+
+    background-color:rgb(21, 199, 1);
+
+    border-radius:10px;
+
+}
+
+QPushButton:hover
+{
+    background-color:rgb(21, 175, 0);
+    padding-left:-3px;
+    padding-top:-3px;
+
+}
+
+
+QPushButton:pressed
+{  
+    background-color:rgb(0, 113, 0);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Export Excel List</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+    font-family:Microsoft Yahei;
+    font-size:13pt; 
+    color:white;
+    background-color:rgb(255, 170, 0);
+    border-radius:10px;
+}
+
+QPushButton:hover
+{
+    background-color:rgb(230, 153, 0);
+    padding-left:-3px;
+    padding-top:-3px;
+
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(197, 128, 0);
+    padding-left:3px;
+    padding-top:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Import Excel List</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+    font-family:Microsoft Yahei;
+    font-size:13pt;  
+    color:white;
+    background-color:rgb(200, 0, 0);
+    border-radius:10px;
+}
+
+
+QPushButton:hover
+{
+
+    background-color:rgb(176, 0, 0);
+    padding-left:-3px;
+    padding-top:-3px;
+}
+
+
+QPushButton:pressed
+{
+    background-color:rgb(147, 0, 0);  
+    padding-left:3px;
+    padding-top:3px;
+    font-size:13pt;}</string>
+        </property>
+        <property name="text">
+         <string>Resume</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

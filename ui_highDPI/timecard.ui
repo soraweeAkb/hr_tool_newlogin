@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TimeCard</class>
+ <widget class="QMainWindow" name="TimeCard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>913</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>913</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>913</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Time Card</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+    background-color:rgb(250, 250, 250);
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>270</y>
+      <width>290</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:20pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:rgb(21, 199, 1);
+    /*边框圆角半径为8像素*/ 
+    border-radius:30px;
+
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:rgb(21, 175, 0);
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+	font-size:23pt;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:rgb(0, 113, 0);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+    font-size:20pt;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLOCK IN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>290</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:20pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:rgb(200, 0, 0);
+    /*边框圆角半径为8像素*/ 
+    border-radius:30px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:rgb(176, 0, 0);
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+	font-size:22pt;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:rgb(147, 0, 0);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+    font-size:20pt;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLOCK OUT</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>110</y>
+      <width>330</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLCDNumber{
+		background-color:rgb(245, 245, 250);
+		color:rgb(0, 0, 0);
+		 border-radius:20px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>true</bool>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+    <property name="value" stdset="0">
+     <double>27.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>45</y>
+      <width>460</width>
+      <height>270</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCalendarWidget QTableView {
+    selection-background-color: #C1272D;
+}
+
+#qt_calendar_navigationbar {
+    background-color: #C1272D;
+	font-weight: bold;
+    color: white;
+}</string>
+    </property>
+    <property name="gridVisible">
+     <bool>true</bool>
+    </property>
+    <property name="navigationBarVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>362</x>
+      <y>40</y>
+      <width>20</width>
+      <height>710</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>670</y>
+      <width>230</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:12pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Forget Record</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>371</x>
+      <y>0</y>
+      <width>550</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:10pt;
+    /*字体颜色为白色*/    
+	font-weight:bold;
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Current Date:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>330</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>330</y>
+      <width>90</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Clock In</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>580</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Clock Out</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>340</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Work Time</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>580</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>380</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>440</y>
+      <width>161</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Over Time</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>480</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>670</y>
+      <width>270</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:12pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Export Monthly Data</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>550</y>
+      <width>161</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Approved OT</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_5">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>580</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>0</y>
+      <width>90</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:10pt;
+    /*字体颜色为白色*/
+	font-weight:bold;    
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:#9e1e24;
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:#CD5257;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>371</width>
+      <height>230</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame
+{
+    background-color:#C1272D;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>170</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:11pt;
+    /*字体颜色为白色*/    
+	font-weight:bold;
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>CURRENT DATE:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>170</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:11pt;
+    /*字体颜色为白色*/    
+	font-weight:bold;
+    color:white;
+    /*背景颜色*/  
+    background-color:#C1272D;
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>CURRENT TIME:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>20</y>
+       <width>180</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/    
+	
+    color:rgb(40, 40, 40);
+    /*背景颜色*/  
+    background-color:white;
+	border-radius: 8px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>20/11/2020</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>290</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:rgb(255, 108, 3);
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:rgb(220, 93, 2);
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:rgb(163, 69, 1);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Cancel Clock Out</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>410</y>
+      <width>330</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox{
+
+	color:rgb(91, 91, 138);
+	    font-family:Calibri;
+    /*字体大小为20点*/
+   font-size:11pt;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Clock-out for yesterday(after 0:00 am)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>670</y>
+      <width>290</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+    font-size:13pt;
+    /*字体颜色为白色*/    
+    color:white;
+    /*背景颜色*/  
+    background-color:rgb(21, 199, 1);
+    /*边框圆角半径为8像素*/ 
+    border-radius:10px;
+
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color:rgb(21, 175, 0);
+    padding-left:-3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:-3px;
+
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*背景颜色*/  
+    background-color:rgb(0, 113, 0);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Apply Late Clock In</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_6">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>380</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>380</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Out-1</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_7">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>430</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>430</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>In-1</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_8">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>480</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>490</y>
+      <width>60</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>Out-2</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_9">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>530</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit
+
+{
+    /*字体为微软雅黑*/
+    font-family:Microsoft Yahei;
+    /*字体大小为20点*/
+	color:rgb(50, 50, 50);
+   font-size:10pt;
+	background-color:rgb(255, 251, 201);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>530</y>
+      <width>50</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Yahei UI</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font-family:Microsoft Yahei UI;
+    font-size:11pt; 
+    color:rgb(128, 134, 132)
+}</string>
+    </property>
+    <property name="text">
+     <string>In-2</string>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>lcdNumber</zorder>
+   <zorder>calendarWidget</zorder>
+   <zorder>line</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>textEdit_2</zorder>
+   <zorder>textEdit_3</zorder>
+   <zorder>label_6</zorder>
+   <zorder>textEdit_4</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>label_7</zorder>
+   <zorder>textEdit_5</zorder>
+   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>checkBox</zorder>
+   <zorder>pushButton_7</zorder>
+   <zorder>textEdit_6</zorder>
+   <zorder>label_10</zorder>
+   <zorder>textEdit_7</zorder>
+   <zorder>label_11</zorder>
+   <zorder>textEdit_8</zorder>
+   <zorder>label_12</zorder>
+   <zorder>textEdit_9</zorder>
+   <zorder>label_13</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
